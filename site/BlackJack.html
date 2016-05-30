@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+		
+		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+		<script type="text/javascript" src="js/styles.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="js/tms-0.3.js"></script>
+		<script type="text/javascript" src="js/tms_presets.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+		<script language="JavaScript">
+			<!-- Hide from non-JavaScript browsers
+			function random(maxValue)
+			{
+			   day = new Date();
+			   hour = day.getHours();
+			   min = day.getMinutes();
+			   sec = day.getSeconds();
+			   return (((hour + 1) * (min + 1) * sec) % maxValue) + 1;
+			}
+			
+			function pickSuit()
+			{
+			   suit = random(4);
+			
+			   if(suit == 1)
+				  return "Spades";
+			
+			   if(suit == 2)
+				  return "Clubs";
+			
+			   if(suit == 3)
+				  return "Diamonds";
+			
+			   return "Hearts";
+			}
+			
+			function cardName(card)
+			{
+			   if(card == 1)
+				  return "Ace";
+			
+			   if(card == 11)
+				  return "Jack";
+			
+			   if(card == 12)
+				  return "Queen";
+			
+			   if(card == 13)
+				  return "King";
+			
+			   return "" + card;
+			}
+			
+			function cardValue(card)
+			{
+			   if(card == 1)
+				  return 11;
+			
+			   if(card > 10)
+				  return 10;
+			
+			   return card;
+			}
+			
+			function PickACard(strWho)
+			{
+			   card = random(13);
+			   suit = pickSuit();
+			
+			   //alert(strWho + " picked the " + cardName(card) + " of " + suit);
+			
+			   return cardValue(card);
+			}
+			
+			function NewHand(form)
+			{
+			   form.dealer.value = 0;
+			   form.you.value = 0;
+			
+			   form.dealer.value = eval(form.dealer.value) + PickACard("Dealer");
+			   form.you.value = eval(form.you.value) + PickACard("You");
+			}
+			
+			function Dealer(form)
+			{
+			   while(form.dealer.value < 17)
+			   {
+				  form.dealer.value = eval(form.dealer.value) + PickACard("Dealer");
+			   }
+			}
+			
+			function User(form)
+			{
+			   form.you.value = eval(form.you.value) + PickACard("You");
+			
+			   if(form.you.value > 21)
+			   {
+				  alert("You busted!");
+			   }
+			}
+			
+			function LookAtHands(form)
+			{
+			   if(form.dealer.value > 21)
+			   {
+				  alert("House busts!  You win!");
+			   }
+			   else   if(form.you.value > form.dealer.value)
+			   {
+				  alert("You win!");
+			   }
+			   else
+			   if(form.dealer.value == form.you.value)
+			   {
+				  alert("Push!");
+			   }
+			   else
+			   {
+				  alert("House wins!");
+			   }
+			}
+			//-->
+			</script>
+		<title>Black Jack</title></head>
+   <body id="page3">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="wrapper">
+					<h1>BIKERS <span class="Logo">CLUB</span></h1>
+					
+				</div><nav>
+				<div class='nav'>
+				  <ul>
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/index.html'>Home</a>
+					
+					</li>
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/About.html'>About Us</a>
+					
+					 <ul>
+					  <li><a href='http://cs99.bradley.edu/~ysarwadia/site/Membership.html'>Membership</a></li>
+					  <li><a href='http://cs99.bradley.edu/~ysarwadia/site/Events.html'>Events</a></li>
+					  </ul>
+					 </li>
+					
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/Gallery.html'>Gallery</a></li>
+					
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/Login.html'>Login</a></li>
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/Contacts.html'>Contacts</a></li>
+					
+					<li class='lamp'><span></span></li>
+				  </ul>
+				</div>
+
+				</nav>
+			</header>
+			
+<!--header end-->
+<!--content -->
+	<div class="wrapper">
+	<br><br>
+	 To start a hand, click 'New Hand'.
+	(Dealer stands on 17)
+	
+	<br>
+	<center>
+	<form>
+	<table border="3">
+	<tbody><tr>
+	  <td><b>Dealer has&nbsp;&nbsp;&nbsp;&nbsp;   </b></td>
+	  <td><input type="TEXT" name="dealer"></td>
+	</tr>
+	<tr>
+	  <td><b>You have  </b></td>
+	  <td><input type="TEXT" name="you"></td>
+	</tr>
+	</tbody></table>
+	
+	<p>
+	
+	</p><br><br><center>
+	<input type="BUTTON" class="button1" value="Hit me!" onclick="User(this.form)">
+	<input type="BUTTON" class="button1" value="Stand" onclick="Dealer(this.form);LookAtHands(this.form);">
+	<input type="BUTTON" class="button1" value="New Hand" onclick="NewHand(this.form)">
+	</center>
+	
+	</form>
+	</center>
+	
+	<br>
+
+  <ul>
+    <ul>
+      <li><a href = "http://cs99.bradley.edu/~ysarwadia/cgi-bin/login.cgi">Back </a></li>
+    </ul>
+  </ul>
+</ul>
+
+<footer>
+				<ul id="icons">
+					<li class="first">Follow Us:</li>
+					<li><a href="#" class="normaltip" title="Facebook"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Picasa"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="YouTube"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon4.jpg" alt=""></a></li>
+				</ul>
+               
+				
+			  <!-- {%FOOTER_LINK} -->
+    </footer>
+<!--footer end-->
+	</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+</html> 	
+

@@ -1,0 +1,271 @@
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+body {
+  font-family:Arial, Verdana, Helvetica, "Trebuchet MS";
+  font-size:10pt;
+  color:#fff;
+  text-align:left;
+  margin:0;
+  padding-bottom:2px;
+  background-color:#FFF;
+  background-image:url(images/siteBg.jpg);
+}
+
+.wrapper {
+	margin:0 auto;
+	width:900px;
+}
+
+.container {
+  margin:auto;
+	width:900px;
+color:#FF5023;
+  background-color:black;
+}
+
+ul {
+	margin:0;
+	padding:0;
+}
+
+li {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+input[type='textbox'], textarea {
+  border:1px solid #8FB9D0;
+  padding:2px 0 2px 5px;
+}
+
+.header {
+  text-align:center;
+  background:url('../images/header-bg.jpg') no-repeat center top;
+  height:165px;
+}
+
+.headerLogo img{
+  margin:28px auto;
+}
+
+h1 {
+color: #FF2B20;
+}
+
+.mainContainer {
+  margin:0;
+  float:left;
+  width:900px;
+}
+
+body {
+    font-family:'Montserrat', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+
+.mainNavigation {
+  margin:8px auto;
+}
+
+#menu a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: #ff5023;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-align: center;
+    background-color: #000;
+}
+#menu li.top_level {
+    vertical-align: top;
+    zoom: 1;
+    display: block;
+    float: left;
+    width: 16.5%;
+    margin-right: 0.2%;
+    position: relative;
+}
+#menu li.last {
+    margin-right: 0px;
+}
+#menu .dropdown {
+    float: none;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+#menu .category:hover .dropdown, #menu .category:focus .dropdown {
+    height:auto;
+}
+#menu .item a, #menu .category a, #menu .category a:visited, #menu .item a:visited {
+    line-height:2em;
+    display:block;
+    padding:.6em;
+}
+#menu .item a:hover, #menu .category a:hover, #menu .item a:focus, #menu .category a:focus {
+    background:#007dac;
+    -webkit-transition: background-color 940ms;
+    -moz-transition: background-color 940ms;
+}
+#menu a.selected {
+    color: #ffffff;
+    background-color: #007dac;
+}
+
+.conatinerHeading {
+  background-color:#000;
+  padding:7px;
+  font-weight:bold;
+  text-transform:capitalize;
+  text-align:center;
+  color:#FF5023;
+}
+
+.latestHeading h3{
+  margin:0;
+  padding:4px;
+  font-size:14pt;
+  font-weight:normal;
+  color:#1e4884;
+}
+
+ul.rig {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+}
+ul.rig li {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+	background: #000;
+	border: 1px solid #000;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.rig li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+ul.rig li h3 {
+	margin: 0 0 5px;
+	color:#FF5023;
+}
+ul.rig li p {
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #fff994;
+}
+/* class for 2 columns */
+ul.rig.columns-2 li {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.rig.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 li {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+ 
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.rig {
+		margin-left: 0;
+	}
+	ul.rig li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+}
+
+table {
+	color:#FF5023;
+}
+
+tr {
+padding:0; 
+}
+
+#form1 {
+background-color:#000;
+}
+
+#canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+p.contact {
+float:left; 
+color:#FF5023;
+text-align:center;
+}
+
+.footer {
+  border-top:1px solid #CC0000;
+  background-color:#000;
+  margin:20px 0;
+  font-size:11pt;
+  padding:10px;
+  font-weight:bold;
+  color:#FF5023;
+}
+
+.footer ul {
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+
+.footer ul li {
+  padding:0 10px 0 7px;
+  list-style:none;
+  display:inline;
+  border-right:1px solid #FF5023;
+}
+
+.footer ul li.last {
+  border:none;
+}
+
+.footer a {
+  text-decoration:none;
+  color:#FF5023;
+}
+
+p.copyright {
+   font-size: 8pt;
+    margin-top: 30px;
+    text-align: center;
+color: #FF5023;
+}
+
+.footer a:hover {
+  color:#FF5023;
+}
+.clear {
+	clear:both;
+}

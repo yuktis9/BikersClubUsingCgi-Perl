@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Register</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+		<script type="text/javascript" src="js/styles.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+		<style>
+		[tooltip]:before {
+    /* needed - do not touch */
+    content: attr(tooltip);
+    position: absolute;
+    opacity: 0;
+    
+    /* customizable */
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;    
+}
+
+[tooltip]:hover:before {
+    /* needed - do not touch */
+    opacity: 1;
+    
+    /* customizable */
+    background: yellow;
+    margin-top: -50px;
+    margin-left: 20px;    
+}
+
+		fieldset {
+		align:center;
+		display:block;
+		text-align:center;
+display:inline;
+margin-left:auto;
+margin-right:auto;
+/* INHERITED ALIGNMENT IS CENTER. ONLY INCLUDE THIS IF YOU WANT */
+/* TO CHANGE THE ALIGNMENT OF THE CONTENTS OF THE FIELDSET */
+text-align:left;
+}
+		</style>
+        <script>
+
+		$(function() {
+		
+			
+			var now = new Date();
+			var minDate = now.toISOString().substring(0,10);
+			
+			$('#phoneInput1').keypress(function(key) {
+				if(key.charCode < 48 || key.charCode > 57)
+				{
+					$("#phoneInput1Error").text("Only numbers allowed");
+					$("#phoneInput1Error").css("display","block");
+					$("#phoneInput1Error").fadeOut(1500);
+					return false;
+				}
+			});
+			
+			$('#phoneInput2').keypress(function(key) {
+				if(key.charCode < 48 || key.charCode > 57)
+				{
+					$("#phoneInput2Error").text("Only numbers allowed");
+					$("#phoneInput2Error").css("display","block");
+					$("#phoneInput2Error").fadeOut(1500);
+					return false;
+				}
+			});
+			
+			$('#dob').prop('max', minDate);
+			$("#submit").click(function() {
+				
+				if( $('#imageUser').val() == ""){
+					formFlaf = false;
+					$("#imageUser").css('box-shadow','0px 2px 8px rgb(255, 0, 0)');
+				}else{
+					$("#imageUser").css('box-shadow','');
+				}
+				
+				var formFlaf = true;
+				if($("#typeOfMembership").val() == null){
+					formFlaf = false;
+					$("#typeOfMembership").css('box-shadow','0px 2px 8px rgb(255, 0, 0)');
+				}else{
+					$("#typeOfMembership").css('box-shadow','');
+				}
+				
+				$('#myForm').find('input').each(function(){
+					
+					if($(this).attr('class') == 'mustField' && this.value == ''){
+						formFlaf = false;
+						$(this).css('border-color', 'red');
+					}else{
+						$(this).css('border-color', '');
+					}
+					
+					if($(this).attr('name') == 'gender'){
+						if(!$("input:radio[name='gender']").is(":checked")){
+							formFlaf = false;
+							$(this).css('box-shadow','0px 2px 8px rgb(255, 0, 0)');
+						}else{
+							$(this).css('box-shadow','');
+						}
+					}
+					
+					if($(this).attr('name') == 'interests'){
+						if(!$("input:checkbox[name='interests']").is(":checked")){
+							formFlaf = false;
+							$(this).css('box-shadow','0px 2px 8px rgb(255, 0, 0)');
+						}else{
+							$(this).css('box-shadow','');
+						}
+					}
+					
+					
+					
+				});
+				if(!formFlaf){
+					$("#fsID").css("border-color","#F00");
+					$("#fsID").css("border-style","solid");
+					$("#errorMessage").show();
+				}
+				
+				return formFlaf;
+			});
+		});
+		
+		</script>
+	</head>
+	<body id="page3" OnLoad="document.Registration.mytextfield.focus();">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="wrapper">
+					<h1>BIKERS <span class="Logo">CLUB</span></h1>
+					
+				</div>
+				<nav>
+				<!--	<ul id="menu">
+						<li><a href="index.html"><span>Homepage</span></a>
+							</li>
+						<li ><a href="Events.html"><span>Events</span></a></li>
+						<li><a href="Gallery.html"><span>Gallery</span></a></li>
+						<li class="active"><a href="Login.html"><span>Login</span></a></li>
+						<li class="last"><a href="Contacts.html"><span>Contacts</span></a></li>
+					</ul>
+				</nav>-->
+				<div class='nav'>
+				  <ul>
+					<li><a href='index.html'>Home</a>
+					
+					</li>
+					<li><a href='About.html'>About Us</a>
+					
+					 <ul>
+					  <li><a href='Membership.html'>Membership</a></li>
+					  <li><a href='Events.html'>Events</a></li>
+					  </ul>
+					 </li>
+					
+					<li><a href='Gallery.html'>Gallery</a></li>
+					
+					<li><a href='Login.html'>Login</a></li>
+					<li><a href='Contacts.html'>Contacts</a></li>
+					
+					<li class='lamp'><span></span></li>
+				  </ul>
+				</div>
+
+				</nav>
+				</header>
+			<!--header end-->
+<!--content end-->
+<div class="wrapper">
+  
+				<div class="wrapper">
+					
+					<form id="myForm" action="/~ysarwadia/cgi-bin/form_data1.cgi" method="POST" name="Registration" enctype="multipart/form-data">
+					  <fieldset id="fsID">
+					  <legend><h2>Registration Form</h2></legend>
+					  <table border=0 align="center">
+						<tr>
+                          <td width="333" class="registration"></td>
+                          <td width="386" class="registration"><p id="errorMessage" style="display:none;color:red;font-size:20px">
+						Highlighted Red fields are mandatory</p></td>
+                        </tr>
+                        <tr>
+                          <td width="333" class="registration"><span class="style16"> User Name <span style="color:red">*</span></span></td>
+                          <td width="386" class="registration"><div class="bg"><input class="mustField" name="username" type="text" id="username" size="30" maxlength="30" placeholder = 'User Name'></div></td>
+                        </tr>
+                        <tr>
+                          <td width="333" class="registration"><span class="style16"> Password <span style="color:red">*</span></span></td>
+                          <td width="386" class="registration"><div class="bg"><input class="mustField" name="password" type="password" size="30" maxlength="30" placeholder = 'Password'>            </div>              </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Email <span style="color:red">*</span></span></td>
+                          <td class="registration"><div class="bg"><input class="mustField" name="email" type="email" size="30" maxlength="30" id="email" placeholder = 'Email'/></div></td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Address <span style="color:red">*</span></span></td>
+                          <td class="registration"><div class="bg"><input class="mustField" name="address" type="text" size="40" maxlength="50" placeholder = 'Address'>                         </div> </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> City <span style="color:red">*</span></span></td>
+                          <td class="registration"><div class="bg"><input class="mustField" name="city" type="text" size="20" maxlength="20" placeholder = 'City'>                         </div> </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Country <span style="color:red">*</span></span></td>
+                          <td class="registration"><div class="bg"><span class="style12">
+                          
+                            <label for="country_name">	</label><input class="mustField" id="country_name" name="country_name" type="text" list="country" placeholder = 'Country Name' />
+							<datalist id="country">
+                                <option value="Afghanistan">
+                                <option value="Albania">
+                                <option value="Algeria">
+                                <option value="Andorra">
+                                <option value="Angola">
+</datalist>
+                          </span> </div></td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Zip Code <span style="color:red">*</span></span></td>
+                          <td class="registration"><input class="mustField" name="zip" pattern="\w{5}" title="Enter 5 characters" type="text"
+                onChange="checkZip( this );" size="5" maxlength="5" minlength="5">                          </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Home Phone Number <span style="color:red">*</span></span></td>
+                          <td class="registration"><span class="style17">
+                           <input type="tel" id="phoneInput1" class="mustField" name="home_phone" size="15"   maxlength="12" pattern=".{0}|.{10,12}" required title="Length must be between 10 to 12" title='Phone Number ' >
+						   <b id="phoneInput1Error" style="color:red;font-size:20px"></b>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Work Phone Number</span></td>
+                          <td class="registration"><span class="style17">
+						   <input type="tel" id="phoneInput2" name="work_phone" size="15" maxlength="12"  title='Phone Number ' />
+						   <b id="phoneInput2Error" style="color:red;font-size:20px"></b>
+							</span></td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Social Security Number (US residents only) </span></td>
+                          <td class="registration"><span class="style17">
+                            <input type="text" name="social_security" size="11" maxlength="11"
+              onChange="checkSSN( this );">
+                            </span></td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Mother's Maiden Name</span></td>
+                          <td class="registration"><input name="maiden_name" type="text" size="20" maxlength="20">                          </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> DOB <span style="color:red">*</span></span></td>
+                          <td class="registration">
+							<input class="mustField" id="dob" name="date" type="Date" >
+							<a href="#" tooltip="Providing your birthday helps make sure you get the right Bikers clubs experience for your age.">why need DOB?<a>
+						</td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16">How long you been riding</span></td>
+                          <td class="registration"><input name="age" type="number" min="1" max="30" step="1"/><i> (In Years) <i>                          </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Gender <span style="color:red">*</span></span></td>
+                          <td class="registration"><span class="style7">
+                            <input type="radio" name="gender" value="male">
+                            Male
+                            <input type="radio" name="gender" value="female">
+                            Female </span></td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Type of Membership <span style="color:red">*</span></span></td>
+                          <td class="registration"><span class="style7">
+                            <p> <br>
+                                <SELECT id="typeOfMembership" NAME="activity" SIZE=3 MULTIPLE>
+                                  <OPTION>Annual</OPTION>
+                                  <OPTION>Monthly</OPTION>
+                                  <OPTION>Weekly</OPTION>
+                                  <OPTION>Other</OPTION>
+                                </SELECT>
+                          </span> </td>
+                        </tr>
+                        <tr>
+                          <td class="registration"><span class="style16"> Interests <span style="color:red">*</span></span></td>
+                          <td class="registration"><span class="style7">
+                            <INPUT TYPE="checkbox" NAME="interests" VALUE="Hockey">
+                            Rock Climbing<BR>
+                            <INPUT TYPE="checkbox" NAME="interests" VALUE="Baseball">
+                            Jungle Safari<BR>
+                            <INPUT TYPE="checkbox" NAME="interests" VALUE="Others">
+                            Others<BR>
+                            </p>
+                          </span></td>
+                        </tr>
+                        <tr>
+                        <td class="registration"><span class="style16"> Upload Image <span style="color:red">*</span></span></td>
+                         <td class="registration"><span class="style7">
+                        <input id="imageUser" type="file" name="photo" required/>
+						<span style="color:red" id="imageError"> </span>
+                         </span></td>
+                        </tr>
+                        
+                        <tr>
+                          <td colspan=2 align=right><div align="center" class="style7"><br>
+						<!--      <p align="center"><a href="#" class="button1" onClick="document.getElementById('ContactForm').submit()">Submit</a>
+						        <a href="#" class="button1" onClick="document.getElementById('ContactForm').reset()">Reset</a>-->
+                                 <input type="submit" class ="button1" name="submit" id="submit" value="Submit" class="button" />
+<input name="reset"  class ="button1" type="reset" id="reset" onclick="alert('Are you sure to RESET)" class="button">
+							      
+					          </p>
+						    </div></td>
+                        </tr>
+                      </table>
+					  </fieldset>
+					</form>
+				</div>
+                
+		  </div>
+<!--footer -->
+			<footer>
+				<ul id="icons">
+					<li class="first">Follow Us:</li>
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Picasa"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="YouTube"><img src="images/icon4.jpg" alt=""></a></li>
+				</ul>
+				
+				<!-- {%FOOTER_LINK} -->
+			</footer>
+<!--footer end-->
+		</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+			
+		</div>
+		<div class="bg1"></div>
+	</body>
+</html>

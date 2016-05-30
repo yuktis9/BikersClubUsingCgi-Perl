@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+		
+		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+		<script type="text/javascript" src="js/styles.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+      <!--  <script type="text/javascript" src="js/arrayvalidation.js"></script> -->
+	  
+	  <script type ="text/javascript">
+	  	  
+	   function resetFormField(){
+	    						
+			var restFlag = confirm("Are you sure, you want to reset?");
+			if(restFlag){
+				document.getElementById("name").value = "";
+				document.getElementById("email").value = "";
+				document.getElementById("message").value = "";
+			}
+			return false;
+		}
+	   
+	   function validateFormField(){
+	  			var flag = false;
+
+				var uname = document.getElementById("name").value;
+				var email = document.getElementById("email").value;
+				var message = document.getElementById("message").value.trim();
+				
+				
+				
+			if(uname == ""){
+				document.getElementById('UnameError').style.display='block';
+			}else{
+				document.getElementById('UnameError').style.display='none';
+			}
+			if(email == ""){
+				document.getElementById('emailError').style.display='block';
+			}else{
+				document.getElementById('emailError').style.display='none';
+			}
+			
+			if(message == ""){
+			
+				document.getElementById('messageError').style.display='block';
+			}else{
+				document.getElementById('messageError').style.display='none';
+			}
+			if(uname != "" && email != "" && message != "" ){
+				flag = true;
+			}
+			return flag;
+		
+	   }
+	  </script>
+		
+	</head>
+	<body id="page5">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="wrapper">
+					<h1>BIKERS <span class="Logo">CLUB</span></h1>
+				</div>
+				<nav>
+				<!--	<ul id="menu">
+						<li><a href="index.html"><span>Homepage</span></a></li>
+						<li><a href="Events.html"><span>Events</span></a></li>
+						<li><a href="Gallery.html"><span>Gallery</span></a></li>
+						<li><a href="Login.html"><span>Login</span></a></li>
+						<li class="last active"><a href="Contacts.html"><span>Contacts</span></a></li>
+					</ul> -->
+					
+				 <div class='nav'>
+				  <ul>
+					<li><a href='index.html'>Home</a>
+					
+					</li>
+					<li><a href='About.html'>About Us</a>
+					
+					 <ul>
+					  <li><a href='Membership.html'>Membership</a></li>
+					  <li><a href='Events.html'>Events</a></li>
+					  </ul>
+					 </li>
+					
+					<li><a href='Gallery.html'>Gallery</a></li>
+					
+					<li><a href='Login.html'>Login</a></li>
+					<li><a href='Contacts.html'>Contacts</a></li>
+					
+					<li class='lamp'><span></span></li>
+				  </ul>
+				</div>
+			</header>
+<!--header end-->
+<!--content -->
+		<h4 id="demo" align = 'right'></h4>
+
+			<script>
+			var d = new Date();
+			document.getElementById("demo").innerHTML = d.toDateString();
+			</script>
+				<div class="wrapper">
+               
+					<h2>Contact Form</h2>
+					<form id="ContactForm" method="post" action = "/~ysarwadia/cgi-bin/email1.cgi">
+                   
+					  <div>
+							<div  class="wrapper">
+								<span>Name:</span>
+								<div class="bg"><input name="name" type="text" class="input" id="name" onFocus="if(this.value==this.defaultValue){this.value='';}" onBlur="if(this.value==''){this.value=this.defaultValue;}"></div>
+								<h4 id="UnameError" style="display:none;color:red">Please enter the User Name</h4>
+							</div>
+							
+							
+							<div  class="wrapper">
+								<span>Email:</span>
+								<div class="bg"><input name="email" type="text" class="input" id="email" onFocus="if(this.value==this.defaultValue){this.value='';}" onBlur="if(this.value==''){this.value=this.defaultValue;}" ></div>								
+							<h4 id="emailError" style="display:none;color:red">Please enter the Email</h4></div>
+							
+							<div  class="textarea_box" "wrapper">
+								<span>Comments:</span>
+								<div class="bg"><textarea name="message" cols="1" rows="1" id="message" onBlur="if(this.value==''){this.value=this.defaultValue;}" onFocus="if(this.value==this.defaultValue){this.value='';}"> </textarea></div>	
+								<h4 id="messageError" style="display:none;color:red">Please Enter Comment</h4>							
+							</div>
+							
+							
+							
+							<input name="submit" class = "button1" type="submit"   id="submit" onClick="return validateFormField();" value="Submit" />
+							<input name="reset" class = "button1" type="submit" id="reset" onClick="return resetFormField();" value="Reset">
+							
+							
+                            
+					  </div>
+					</form>
+                     <br> <br> 
+					  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d96724.34817241336!2d-89.622388!3d40.748037!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1445541110009" width="959" height="400" frameborder="0" style="border:0" allowfullscreen frameborder="1"></iframe>
+				</div>
+			</article>
+		</div>
+		
+		<div class="main">
+        
+<!--content end-->
+<!--footer -->
+			<footer>
+				<ul id="icons">
+					<li class="first">Follow Us:</li>
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Picasa"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="YouTube"><img src="images/icon4.jpg" alt=""></a></li>
+				</ul>
+				
+			  <!-- {%FOOTER_LINK} -->
+		  </footer>
+<!--footer end-->
+	</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+</html>

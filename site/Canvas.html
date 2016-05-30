@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Homepage</title>
+		<meta charset="utf-8">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="http://cs99.bradley.edu/~ysarwadia/site/css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href=http://cs99.bradley.edu/~ysarwadia/site/"css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="http://cs99.bradley.edu/~ysarwadia/site/css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="http://cs99.bradley.edu/~ysarwadia/site/css/styles.css" type="text/css" media="all">
+		
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/jquery-1.6.js" ></script>
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/styles.js" ></script>
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/cufon-yui.js"></script>
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/Vegur_300.font.js"></script>
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/PT_Sans_700.font.js"></script>
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="http://cs99.bradley.edu/~ysarwadia/site/js/atooltip.jquery.js"></script>
+		<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+		
+		<link rel = "stylesheet" type = "text/css" href = "http://cs99.bradley.edu/~ysarwadia/site/css/draw.css">
+		<script src = "http://cs99.bradley.edu/~ysarwadia/site/js/draw1.js"></script>
+		
+		<script src = "draw.js"></script>
+<script type="text/javascript">
+function coordinates(event) {
+    document.getElementById("demo").innerHTML =
+    "X = " + event.screenX + "<br>Y = " + event.screenY;
+}
+$(function(){
+      var slider = new BeaverSlider({
+        structure: {
+          container: {
+            id: "my-slider",
+            width: 720,
+            height: 420
+          }
+        },
+        content: {
+          images: [
+            "img/1.jpg",
+            "img/2.jpg"
+          ]
+        },
+        animation: {
+          effects: effectSets["slider: big set 2"],
+          interval: 1000
+        }
+      });   
+	});
+	
+	</script>
+	</head>
+	<body id="page3">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="wrapper">
+					<h1>BIKERS <span class="Logo">CLUB</span></h1>
+					
+				</div><nav>
+				<div class='nav'>
+				  <ul>
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/index.html'>Home</a>
+					
+					</li>
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/About.html'>About Us</a>
+					
+					 <ul>
+					  <li><a href='http://cs99.bradley.edu/~ysarwadia/site/Membership.html'>Membership</a></li>
+					  <li><a href='http://cs99.bradley.edu/~ysarwadia/site/Events.html'>Events</a></li>
+					  </ul>
+					 </li>
+					
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/Gallery.html'>Gallery</a></li>
+					
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/Login.html'>Login</a></li>
+					<li><a href='http://cs99.bradley.edu/~ysarwadia/site/Contacts.html'>Contacts</a></li>
+					
+					<li class='lamp'><span></span></li>
+				  </ul>
+				</div>
+
+				</nav>
+			</header>
+			
+<!--header end-->
+<!--content -->
+<div class="wrapper">
+<div id="page" class="container" >
+
+
+
+   <h1>Canvas Drawing</h1><br>
+   <br>
+ <strong><p>Click on the canvas frame to know the position of the cursor in X and Y coordinates</font> </p></strong>         
+<table id = "canvas" align="center" >
+         
+         <caption style="color:blue">Hold <em>Ctrl</em> to draw blue.</caption> 
+         <caption style="color:red">Hold <em>Shift</em> to draw red.</caption> 
+		 
+
+<p id="demo"></p>
+
+		 <tbody id = "tablebody" onmousedown="coordinates(event)" > 
+
+</tbody>
+</table> 
+
+ </div>
+
+</div>
+</div>
+
+<a href = "http://cs99.bradley.edu/~ysarwadia/cgi-bin/login.cgi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back</a><br></li></ul>
+		<div class="main">
+
+
+		
+        
+<!--content end-->
+<!--footer -->
+			<footer>
+				<ul id="icons">
+					<li class="first">Follow Us:</li>
+					<li><a href="#" class="normaltip" title="Facebook"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Picasa"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="YouTube"><img src="http://cs99.bradley.edu/~ysarwadia/site/images/icon4.jpg" alt=""></a></li>
+				</ul>
+               
+               
+				
+			  <!-- {%FOOTER_LINK} -->
+		  </footer>
+<!--footer end-->
+	</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+</html>
+

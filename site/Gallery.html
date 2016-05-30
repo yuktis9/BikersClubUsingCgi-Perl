@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Gallery</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+		
+		<script type="text/javascript" src="js/jquery-1.6.js" ></script>
+		<script type="text/javascript" src="js/styles.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+        <script src="js/jquery-1.11.0.min.js"></script>    
+        <script src="js/beaverslider.js"></script>         <!-- link to a framework -->
+	    <script src="js/beaverslider-effects.js"></script> <!-- link to a set of effects -->
+	<script>
+	
+	$(function(){
+      var slider = new BeaverSlider({
+        structure: {
+          container: {
+            id: "my-slider",
+            width: 720,
+            height: 420
+          }
+        },
+        content: {
+          images: [
+            "img/1.jpg",
+            "img/2.jpg"
+          ]
+        },
+        animation: {
+          effects: effectSets["slider: big set 2"],
+          interval: 1000
+        }
+      });   
+	});
+	
+	</script>
+	</head>
+	<body id="page3">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="wrapper">
+					<h1>BIKERS <span class="Logo">CLUB</span></h1>
+					<form id="search" method="post">
+						<fieldset>
+						</fieldset>
+					</form>
+				</div>
+				<nav>
+					<!--<ul id="menu">
+						<li><a href="index.html"><span>Homepage</span></a></li>
+						<li ><a href="Events.html"><span>Events</span></a></li>
+						<li  class="active"><a href="Gallery.html"><span>Gallery</span></a></li>
+						<li><a href="Login.html"><span>Login</span></a></li>
+						<li class="last"><a href="Contacts.html"><span>Contacts</span></a></li>
+					</ul>-->
+					<div class='nav'>
+				  <ul>
+					<li><a href='index.html'>Home</a>
+					
+					</li>
+					<li><a href='About.html'>About Us</a>
+					
+					 <ul>
+					  <li><a href='Membership.html'>Membership</a></li>
+					  <li><a href='Events.html'>Events</a></li>
+					  </ul>
+					 </li>
+					
+					<li><a href='Gallery.html'>Gallery</a></li>
+					
+					<li><a href='Login.html'>Login</a></li>
+					<li><a href='Contacts.html'>Contacts</a></li>
+					
+					<li class='lamp'><span></span></li>
+				  </ul>
+				</div>
+
+				</nav>
+
+				
+			</header>
+<!--header end-->
+<!--content -->
+<br>
+<br>
+		<div class="main">
+        <div class="gallery">
+					<ul>
+						<li>
+							<a href=""><img src="images/img_3.jpg"  width="280" height="190" alt="Bikers Club" title="Bikers Club"></a>
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+					  <a href=""><img src="images/img_10.jpg"  width="280" height="190" alt="Bikers Club" title="Bikers Club"></a> 
+					  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					  <a href=""><img src="images/img_4.jpg"  width="280" height="190" alt="Bikers Club" title="Bikers Club"></a>
+						   <h4>Stay Fit Satay Healthy Programs &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mountail Climbing &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;On The Rocks</h4>
+					  </li>
+						<li>
+							<a href=""><img src="images/img_5.jpg"  width="280" height="190" alt="Bikers Club" title="Bikers Club">
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							</a> <a href=""><img src="images/img_7.jpg"  width="280" height="190" alt="Bikers Club" title="Bikers Club"></a>
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							<a href=""><img src="images/img_14.jpg"  width="280" height="190" alt="Bikers Club" title="Bikers Club"></a>
+						    <h4>Mountain Biking</h4>
+						</li>
+		  </ul>
+		  </div>
+<!--content end-->
+<!--footer -->
+			<footer>
+				<ul id="icons">
+					<li class="first">Follow Us:</li>
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Picasa"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="YouTube"><img src="images/icon4.jpg" alt=""></a></li>
+				</ul>
+				
+			  <!-- {%FOOTER_LINK} -->
+		  </footer>
+<!--footer end-->
+	</div>
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+</html>
